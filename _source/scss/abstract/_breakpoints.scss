@@ -1,0 +1,49 @@
+// ==================================================
+// Break Points
+// ==================================================
+
+
+// Reference
+// ------------------------------
+// Reference: http://iosres.com
+// iPhone 5:        320x568    @2
+// iPhone 8:        375x667    @2
+// iPhone 8+:       414x736    @3   Downsampled from 1242x2208 to 1080x1920
+// iPhone X:        375x812    @3
+// iPad:            768x1024   @2
+// iPad Pro 10.5":  834x1112   @2
+// iPad Pro 12.9":  1024x1366  @2
+//  Watch 38mm:    272x340    @1
+//  Watch 42mm:    312x390    @1
+
+
+// Break points
+// ------------------------------
+$breakpoints: (
+	'xsmall': 380px,
+	'small':  580px,
+	'medium': 768px,
+	'large':  1024px,
+	'xlarge': 1400px,
+);
+
+
+// Media queries
+// ------------------------------
+@mixin screen-below( $breakpoint ) {
+	@media (max-width: (map-get( $breakpoints, $breakpoint ) - 1) ) {
+		@content;
+	}
+}
+@mixin screen-above( $breakpoint ) {
+	@media (min-width: map-get( $breakpoints, $breakpoint ) ) {
+		@content;
+	}
+}
+@mixin screen-between( $breakpoint1, $breakpoint2 ) {
+	@include screen-above( $breakpoint1 ) {
+		@include screen-below( $breakpoint2 ) {
+			@content;
+		}
+	}
+}

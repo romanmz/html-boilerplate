@@ -1,0 +1,127 @@
+// ==================================================
+// Other Mixins
+// ==================================================
+
+
+// Clearfix
+// ------------------------------
+@mixin clearfix {
+	// http://cssmojo.com/the-very-latest-clearfix-reloaded/
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+
+// Smooth scrolling on mobile
+// ------------------------------
+@mixin smooth-scroll {
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+
+// Fixed ratios
+// ------------------------------
+@mixin fixed-ratio( $width, $height ) {
+	position: relative;
+	height: 0;
+	@include fixed-ratio-override( $width, $height );
+	
+	> * {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+	}
+}
+@mixin fixed-ratio-override( $width, $height ) {
+	padding-bottom: ( $height / $width ) * 100%;
+}
+
+
+// Bleed backgrounds
+// ------------------------------
+@mixin bleed-left {
+	position: relative;
+	
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		width: 100vw;
+		z-index: -1;
+		background: inherit;
+	}
+}
+@mixin bleed-right {
+	position: relative;
+	
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 100vw;
+		z-index: -1;
+		background: inherit;
+	}
+}
+
+
+// Form selectors
+// ------------------------------
+@mixin text-inputs {
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	input[type="url"],
+	input[type="tel"],
+	input[type="search"],
+	.ie11 input[type="color"],
+	input[type="number"],
+	input[type="date"],
+	input[type="time"],
+	input[type="datetime-local"],
+	input[type="month"],
+	input[type="week"] {
+		@content;
+	}
+}
+@mixin stylable-inputs {
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	input[type="url"],
+	input[type="tel"],
+	input[type="search"],
+	.ie11 input[type="color"],
+	input[type="number"],
+	input[type="date"],
+	input[type="time"],
+	input[type="datetime-local"],
+	input[type="month"],
+	input[type="week"],
+	textarea,
+	select {
+		@content;
+	}
+}
+@mixin buttons() {
+	input[type="button"],
+	input[type="submit"],
+	input[type="reset"],
+	button {
+		@content;
+	}
+	::-webkit-file-upload-button {
+		@content;
+	}
+}
