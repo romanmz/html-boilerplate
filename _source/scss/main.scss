@@ -1,10 +1,9 @@
 
 // Configuration
-@import 'abstract/breakpoints';
-@import 'abstract/colors';
-@import 'abstract/sizing-and-spacing';
-@import 'abstract/typography';
-@import 'abstract/utility';
+@import 'abstract/functions';
+@import 'abstract/variables';
+@import 'abstract/mixins-helpers';
+@import 'abstract/mixins-styles';
 
 // Vendor
 @import 'vendor/normalize';

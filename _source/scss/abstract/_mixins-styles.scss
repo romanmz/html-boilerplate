@@ -1,12 +1,6 @@
 // ==================================================
-// Typography
+// Reusable Styles
 // ==================================================
-
-
-// Fonts
-// ------------------------------
-$font-sans: Helvetica, Arial, sans-serif;
-$font-code: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
 
 
 // Typographic styles
@@ -39,4 +33,16 @@ $font-code: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter",
 @mixin h6 {
 	font-size: 1.6rem;
 	line-height: 1.5;
+}
+
+
+// Colour styles
+// ------------------------------
+@mixin body-color {
+	color: $grey-dark;
+	background-color: white;
+}
+@mixin highlight-color {
+	color: white;
+	background-color: $blue;
 }

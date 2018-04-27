@@ -1,6 +1,27 @@
 // ==================================================
-// Other Mixins
+// Mixins
 // ==================================================
+
+
+// Media queries
+// ------------------------------
+@mixin screen-below( $breakpoint ) {
+	@media (max-width: (map-get( $breakpoints, $breakpoint ) - 1)) {
+		@content;
+	}
+}
+@mixin screen-above( $breakpoint ) {
+	@media (min-width: map-get( $breakpoints, $breakpoint )) {
+		@content;
+	}
+}
+@mixin screen-between( $breakpoint1, $breakpoint2 ) {
+	@include screen-above( $breakpoint1 ) {
+		@include screen-below( $breakpoint2 ) {
+			@content;
+		}
+	}
+}
 
 
 // Clearfix
@@ -114,7 +135,7 @@
 		@content;
 	}
 }
-@mixin buttons() {
+@mixin form-buttons() {
 	input[type="button"],
 	input[type="submit"],
 	input[type="reset"],
