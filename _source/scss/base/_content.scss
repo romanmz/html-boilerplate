@@ -41,7 +41,17 @@ hr {
 // Links
 // ------------------------------
 a {
-	@include link-style;
+	color: $blue;
+	background-color: transparent;
+	text-decoration: underline;
+	transition: color .5s, background-color .5s, border .5s;
+	
+	&:hover,
+	&:focus {
+		color: white;
+		background-color: $blue;
+		text-decoration: none;
+	}
 }
 
 
@@ -71,7 +81,8 @@ dd {
 // Quotes
 // ------------------------------
 blockquote {
-	@include quoted-text;
+	@include h4;
+	color: $grey-medium;
 	
 	cite {
 		display: block;
@@ -80,16 +91,15 @@ blockquote {
 	}
 }
 q {
-	@include quoted-text;
-	font-size: 1em;
-	line-height: inherit;
+	color: $grey-medium;
 }
 
 
 // Code
 // ------------------------------
 pre, code {
-	@include sample-code;
+	font-family: $font-code;
+	background-color: $grey-lighter;
 }
 pre {
 	padding: .5em 1em;

@@ -14,13 +14,18 @@ html {
 	font-size: 62.5%;
 }
 body {
+	font-family: $font-sans;
 	@include body-text;
+	color: $grey-dark;
+	background-color: white;
 	// nicer looking fonts on macs
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 ::selection {
-	@include highlighted-text;
+	color: white;
+	background-color: $grey-dark;
+	text-shadow: none;
 }
 
 

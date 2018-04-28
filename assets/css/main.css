@@ -154,9 +154,9 @@ blockquote { font-size: 2rem; line-height: 1.5; color: #888; }
 
 blockquote cite { display: block; text-align: right; font-weight: bolder; }
 
-q { font-size: 2rem; line-height: 1.5; color: #888; font-size: 1em; line-height: inherit; }
+q { color: #888; }
 
-pre, code { font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace; font-size: 1.6rem; line-height: 1.8; background-color: #EEE; }
+pre, code { font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace; background-color: #EEE; }
 
 pre { padding: .5em 1em; overflow: auto; }
 
@@ -198,3 +198,93 @@ thead td, tfoot td, thead th, tfoot th { background-color: #EEE; }
   .responsive-table th { background: #EEE; }
   .responsive-table td[data-column-name], .responsive-table th[data-column-name] { padding-left: 12rem; padding-right: 0; overflow: hidden; }
   .responsive-table td[data-column-name]:before, .responsive-table th[data-column-name]:before { content: attr(data-column-name); float: left; margin-left: -12rem; width: 12rem; padding-left: 1em; -webkit-box-sizing: border-box; box-sizing: border-box; overflow: hidden; font-weight: bolder; } }
+
+.button { display: inline-block; width: auto; border: none; padding: 0.5em 2em; margin: 0; color: white; background: #069; text-decoration: none; text-align: center; font-weight: normal; border-radius: 3px; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-transition: color .5s, background-color .5s, border .5s; transition: color .5s, background-color .5s, border .5s; position: relative; cursor: pointer; }
+
+.button:hover, .button:focus { color: white; background: #33bbff; }
+
+.message { display: block; padding: .5em 1em; border: none; margin: 0 0 2rem; color: #06A; background: #EEE; border-left: 5px solid currentColor; }
+
+.message > * { margin-bottom: 0; }
+
+.message ul { padding-left: 1em; }
+
+.message a { color: inherit; text-decoration: underline; }
+
+.message a:hover, .message a:focus { color: white; background-color: #06A; text-decoration: none; }
+
+.message--error { color: #C00; }
+
+.message--error a:hover, .message--error a:focus { background-color: #C00; }
+
+.message--success { color: #090; }
+
+.message--success a:hover, .message--success a:focus { background-color: #090; }
+
+.message--alert { color: black; background-color: #FD0; }
+
+.message--alert a:hover, .message--alert a:focus { background-color: black; }
+
+html.outdated-browser #outdated-browser-alert { display: block !important; }
+
+.no-margin { margin-bottom: 0; }
+
+.margin-1 { margin-bottom: 2rem; }
+
+.margin-2 { margin-bottom: 4rem; }
+
+.margin-3 { margin-bottom: 6rem; }
+
+.margin-4 { margin-bottom: 8rem; }
+
+.full-width { display: block; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; }
+
+.ratio-16-9, .ratio-4-3, .ratio-1-1 { position: relative; height: 0; padding-bottom: 56.25%; }
+
+.ratio-16-9 > *, .ratio-4-3 > *, .ratio-1-1 > * { position: absolute; top: 0; left: 0; width: 100%; height: 100%; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.ratio-4-3 { padding-bottom: 75%; }
+
+.ratio-1-1 { padding-bottom: 100%; }
+
+.bleed-left { position: relative; }
+
+.bleed-left:before { content: ''; position: absolute; top: 0; bottom: 0; right: 0; width: 100vw; z-index: -1; background: inherit; }
+
+.bleed-right { position: relative; }
+
+.bleed-right:after { content: ''; position: absolute; top: 0; bottom: 0; left: 0; width: 100vw; z-index: -1; background: inherit; }
+
+.visually-hidden, .screen-reader-text { position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); word-wrap: normal !important; }
+
+.visually-hidden.focusable:active, .focusable.screen-reader-text:active, .visually-hidden.focusable:focus, .focusable.screen-reader-text:focus { height: auto; width: auto; overflow: visible; clip: rect(auto, auto, auto, auto); }
+
+.invisible { visibility: hidden; }
+
+.text-left { text-align: left; }
+
+.text-center { text-align: center; }
+
+.text-right { text-align: right; }
+
+.hyphens { -webkit-hyphens: auto; -ms-hyphens: auto; hyphens: auto; }
+
+.float-left, .alignleft { float: left; }
+
+.float-right, .alignright { float: right; }
+
+.clear { clear: both; }
+
+img.float-left, img.alignleft, figure.float-left, figure.alignleft { margin: 0 2rem 2rem 0; }
+
+img.float-right, img.alignright, figure.float-right, figure.alignright { margin: 0 0 2rem 2rem; }
+
+.clearfix:after { content: ''; display: block; clear: both; }
+
+.scroll { overflow: auto; -webkit-overflow-scrolling: touch; }
+
+.no-overflow { overflow: hidden; }
+
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+
+.wp-caption { max-width: 100%; }
