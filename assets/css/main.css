@@ -261,6 +261,8 @@ html.outdated-browser #outdated-browser-alert { display: block !important; }
 
 .invisible { visibility: hidden; }
 
+.print-only { display: none; }
+
 .text-left { text-align: left; }
 
 .text-center { text-align: center; }
