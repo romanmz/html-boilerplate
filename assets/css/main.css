@@ -288,3 +288,27 @@ img.float-right, img.alignright, figure.float-right, figure.alignright { margin:
 .aligncenter { display: block; margin-left: auto; margin-right: auto; }
 
 .wp-caption { max-width: 100%; }
+
+.main-row { overflow: hidden; }
+
+.wrapper { max-width: 120rem; padding: 0 3rem; margin: 0 auto; }
+
+.wrapper:after { content: ''; display: block; clear: both; }
+
+.sample-grid { display: grid; grid-template-columns: 1fr 2fr 4fr 3fr; grid-gap: 2rem; margin-bottom: 2rem; }
+
+.no-cssgrid .sample-grid { display: -ms-grid; }
+
+.no-cssgrid .sample-grid { -ms-grid-columns: 1fr 2fr 4fr 3fr; }
+
+.sample-grid .col-2 { grid-column: 2; }
+
+.no-cssgrid .sample-grid .col-2 { -ms-grid-column: 2; }
+
+.sample-grid .col-3 { grid-column: 3; }
+
+.no-cssgrid .sample-grid .col-3 { -ms-grid-column: 3; }
+
+.sample-grid .col-4 { grid-column: 4; }
+
+.no-cssgrid .sample-grid .col-4 { -ms-grid-column: 4; }

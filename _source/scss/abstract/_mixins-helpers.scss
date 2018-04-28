@@ -166,3 +166,77 @@
 		@content;
 	}
 }
+
+
+// Support for legacy grid
+// ------------------------------
+@mixin display-grid {
+	display: grid;
+	.no-cssgrid & {
+		display: -ms-grid;
+	}
+}
+@mixin grid-template-rows($value) {
+	grid-template-rows: $value;
+	.no-cssgrid & {
+		-ms-grid-rows: $value;
+	}
+}
+@mixin grid-template-columns($value) {
+	grid-template-columns: $value;
+	.no-cssgrid & {
+		-ms-grid-columns: $value;
+	}
+}
+@mixin grid-row($value1, $value2:null) {
+	@if $value2 == null {
+		grid-row: $value1;
+		.no-cssgrid & {
+			-ms-grid-row: $value1;
+		}
+	} @else {
+		grid-row: #{$value1} / #{$value2};
+		.no-cssgrid & {
+			-ms-grid-row: $value1;
+			-ms-grid-row-span: #{$value2 - $value1};
+		}
+	}
+}
+@mixin grid-column($value1, $value2:null) {
+	@if $value2 == null {
+		grid-column: $value1;
+		.no-cssgrid & {
+			-ms-grid-column: $value1;
+		}
+	} @else {
+		grid-column: #{$value1} / #{$value2};
+		.no-cssgrid & {
+			-ms-grid-column: $value1;
+			-ms-grid-column-span: #{$value2 - $value1};
+		}
+	}
+}
+@mixin align-items($value) {
+	align-items: $value;
+	.no-cssgrid & > * {
+		-ms-grid-row-align: $value;
+	}
+}
+@mixin justify-items($value) {
+	justify-items: $value;
+	.no-cssgrid & > * {
+		-ms-grid-column-align: $value;
+	}
+}
+@mixin align-self($value) {
+	align-self: $value;
+	.no-cssgrid & {
+		-ms-grid-row-align: $value;
+	}
+}
+@mixin justify-self($value) {
+	justify-self: $value;
+	.no-cssgrid & {
+		-ms-grid-column-align: $value;
+	}
+}
