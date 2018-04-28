@@ -3,15 +3,39 @@
 // ==================================================
 
 
-// Typographic styles
+// Typography - Body
 // ------------------------------
 @mixin body-text {
 	font-family: $font-sans;
-	font-size: 1.4rem;
-	line-height: 1.75;
+	font-size: 1.6rem;
+	line-height: 1.8;
+	color: $grey-dark;
+	background-color: white;
 }
+@mixin highlighted-text {
+	color: white;
+	background-color: $grey-dark;
+	text-shadow: none;
+}
+@mixin link-style {
+	color: $blue;
+	background-color: transparent;
+	text-decoration: underline;
+	transition: color .5s, background-color .5s, border .5s;
+	
+	&:hover,
+	&:focus {
+		color: white;
+		background-color: $blue;
+		text-decoration: none;
+	}
+}
+
+
+// Typography - Headings
+// ------------------------------
 @mixin h1 {
-	font-size: 4.8rem;
+	font-size: 5rem;
 	line-height: 1.2;
 }
 @mixin h2 {
@@ -28,21 +52,30 @@
 }
 @mixin h5 {
 	font-size: 1.6rem;
-	line-height: 1.5;
+	line-height: 1.8;
 }
 @mixin h6 {
 	font-size: 1.6rem;
-	line-height: 1.5;
+	line-height: 1.8;
 }
 
 
-// Colour styles
+// Typography - Other
 // ------------------------------
-@mixin body-color {
-	color: $grey-dark;
-	background-color: white;
+@mixin caption {
+	font-size: 1.6rem;
+	line-height: 1.8;
+	font-weight: 600;
+	text-transform: uppercase;
 }
-@mixin highlight-color {
-	color: white;
-	background-color: $blue;
+@mixin quoted-text {
+	font-size: 2rem;
+	line-height: 1.5;
+	color: $grey-medium;
+}
+@mixin sample-code {
+	font-family: $font-code;
+	font-size: 1.6rem;
+	line-height: 1.8;
+	background-color: $grey-lighter;
 }

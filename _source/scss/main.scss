@@ -9,4 +9,7 @@
 @import 'vendor/normalize';
 
 // Base HTML
-@import 'base/fonts';
+@import 'base/base';
+@import 'base/content';
+@import 'base/forms';
+@import 'base/tables';
