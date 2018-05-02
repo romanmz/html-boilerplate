@@ -11,6 +11,15 @@
 	grid-gap: $space;
 	margin-bottom: $space;
 	
+	.col {
+		color: white;
+		background: $blue;
+		padding: 0.5em;
+		text-align: center;
+	}
+	.col:nth-child( even ) {
+		background: $blue-light;
+	}
 	.col-2 { @include grid-column(2) }
 	.col-3 { @include grid-column(3) }
 	.col-4 { @include grid-column(4) }
