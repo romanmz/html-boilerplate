@@ -31,10 +31,10 @@ hr {
 	display: block;
 	clear: both;
 	border: none;
-	border-top: 1px solid $grey-lighter;
+	border-top: 1px solid $grey-light;
 	padding: 0;
 	height: 1px;
-	margin: $space 0;
+	margin: ($space * 2) 0;
 }
 
 
@@ -125,3 +125,11 @@ figure {
 	background: $grey-lighter;
 }
 figcaption {}
+
+
+// Other
+// ------------------------------
+abbr[title] {
+	border-bottom: 1px dotted;
+	text-decoration: none;
+}
