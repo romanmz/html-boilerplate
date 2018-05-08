@@ -14,16 +14,16 @@
 @import 'base/forms';
 @import 'base/tables';
 
-// Components
-@import 'components/buttons';
-@import 'components/messages';
-@import 'components/utility';
-@import 'components/wordpress';
+// Content Area
+@import 'content/buttons';
+@import 'content/messages';
+@import 'content/grids';
+@import 'content/utility';
+@import 'content/wordpress';
 
 // Layouts
 @import 'layout/containers';
 @import 'layout/footer';
-@import 'layout/grids';
 @import 'layout/header';
 
 // Page Templates
