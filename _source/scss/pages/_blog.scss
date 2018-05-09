@@ -1,0 +1,76 @@
+// ==================================================
+// Blog
+// ==================================================
+
+
+// Blog items
+// ------------------------------
+.blog-item {
+	padding: ($space * 2) 0;
+	border-top: 1px solid $grey-lighter;
+}
+.blog-item--thumb {
+	display: block;
+	margin: 0 auto $space;
+}
+.blog-item--content {
+	> :last-child {
+		margin-bottom: 0;
+	}
+}
+@include screen-above( xsmall ) {
+	.blog-item {
+		display: flex;
+		align-items: flex-start;
+	}
+	.blog-item--thumb {
+		margin: 0 $space 0 0;
+		width: 7.5rem;
+	}
+}
+@include screen-above( small ) {
+	.blog-item--thumb {
+		width: 10rem;
+	}
+}
+
+
+// Numbered pagination
+// ------------------------------
+.numbered-pagination {
+	ul {
+		display: flex;
+		justify-content: center;
+	}
+	li {
+		margin: 0.5em;
+	}
+	a, span {
+		display: block;
+		min-width: 2em;
+		line-height: 2;
+		text-align: center;
+		text-decoration: none;
+		background: $grey-lighter;
+	}
+	a:hover,
+	a:focus {
+		color: white;
+		background-color: $blue;
+	}
+}
+
+
+// Prev/next pagination
+// ------------------------------
+.pagination {
+	ul {
+		display: flex;
+	}
+	.pagination-previous {
+		margin-right: $space;
+	}
+	.pagination-next {
+		margin-left: auto;
+	}
+}

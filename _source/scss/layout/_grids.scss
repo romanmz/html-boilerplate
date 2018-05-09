@@ -1,0 +1,19 @@
+// ==================================================
+// Grids
+// ==================================================
+
+
+// Multi-column grid
+// ------------------------------
+.multi-column-grid {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -$space;
+
+	> * {
+		flex: 1 1 0;
+		margin-bottom: $space;
+		margin-left: $space;
+		min-width: 20rem;
+	}
+}
