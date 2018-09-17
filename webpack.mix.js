@@ -18,6 +18,7 @@ mix.js([
 mix.sass('_source/scss/main.scss', 'assets/css/', {outputStyle: 'compact'});
 mix.sass('_source/scss/print.scss', 'assets/css/', {outputStyle: 'compact'});
 mix.options({
+	autoprefixer: { options: { browsers: ['last 2 versions'] } },
 	processCssUrls: false,
 });
 
