@@ -1,5 +1,7 @@
 {
-    "/assets/js/main.js": "/assets/js/main.js",
     "/assets/css/main.css": "/assets/css/main.css",
-    "/assets/css/print.css": "/assets/css/print.css"
+    "/assets/css/print.css": "/assets/css/print.css",
+    "/mix.js.map": "/mix.js.map",
+    "/assets/css/main.css.map": "/assets/css/main.css.map",
+    "/assets/css/print.css.map": "/assets/css/print.css.map"
 }
