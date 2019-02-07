@@ -6,7 +6,7 @@
 // Standard quotes
 // ------------------------------
 blockquote {
-	@include h4-size;
+	@include font-size-medium;
 	color: $grey-medium;
 	
 	cite {
@@ -17,4 +17,82 @@ blockquote {
 }
 q {
 	color: $grey-medium;
+}
+
+
+// Quote block [gutenberg]
+// ------------------------------
+.wp-block-quote{
+	
+	// Style variation: Large
+	&.is-style-large {
+		@include font-size-xlarge;
+		margin: 0 0 $space;
+		padding: 0;
+		
+		p {
+			font: inherit;
+		}
+		cite {
+			@include font-size-medium;
+		}
+	}
+}
+
+
+// Pullquote block [gutenberg]
+// ------------------------------
+.wp-block-pullquote {
+	display: block;
+	border-top: 3px solid $grey-medium;
+	border-bottom: 3px solid $grey-medium;
+	padding: 4rem 0;
+	
+	blockquote {
+		@include font-size-large;
+		margin: 0 auto;
+		max-width: 100rem;
+	}
+	p {
+		font: inherit !important;
+	}
+	cite {
+		@include font-size-medium;
+		font-style: normal;
+	}
+	
+	// Style variation: Solid color
+	&.is-style-solid-color {
+		padding: 4rem 3rem;
+		
+		blockquote {
+			max-width: 100rem;
+			
+			&:not( .has-text-color ) {
+				color: $grey-dark;
+			}
+			p {
+				font: inherit;
+				margin: 0 0 2rem;
+			}
+		}
+	}
+	
+	// Custom background colours
+	// inline 'border-color'
+	// &.has-[color-name]-background-color
+	
+	// Custom text colours
+	// blockquote.has-text-color {}
+	// blockquote.has-[color-name]-color
+	
+	// Alignment variations
+	&.alignleft {
+		@extend .alignleft;
+	}
+	&.alignright {
+		@extend .alignright;
+	}
+	&.alignwide {}
+	&.alignfull {}
 }

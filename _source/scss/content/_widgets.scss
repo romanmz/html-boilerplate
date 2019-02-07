@@ -1,0 +1,163 @@
+// ==================================================
+// Widgets
+// ==================================================
+
+
+// Archives block [gutenberg]
+// ------------------------------
+.wp-block-archives {
+	margin: 0 0 2rem;
+	
+	// Style variation: List (default)
+	&.wp-block-archives-list {
+		li {}
+		a {}
+	}
+	
+	// Style variation: Dropdown
+	&.wp-block-archives-dropdown {
+		label {}
+		select {}
+	}
+	
+	// Alignment variations
+	&.aligncenter {}
+	&.alignleft {}
+	&.alignright {}
+}
+
+
+// Categories block [gutenberg]
+// ------------------------------
+.wp-block-categories {
+	margin: 0 0 2rem;
+	
+	// Style variation: List (default)
+	&.wp-block-categories-list {
+		li {}
+		a {}
+		ul.children {}
+	}
+	
+	// Style variation: Dropdown
+	&.wp-block-categories-dropdown {
+		select {}
+	}
+	
+	// Alignment variations
+	&.aligncenter {}
+	&.alignleft {
+		@extend .alignleft;
+	}
+	&.alignright {
+		@extend .alignright;
+	}
+	&.alignfull {}
+}
+
+
+// Latest Comments block [gutenberg]
+// ------------------------------
+.wp-block-latest-comments {
+	padding: 0;
+	
+	.wp-block-latest-comments__comment {
+		font: inherit;
+		margin-bottom: 1rem;
+	}
+	.avatar, .wp-block-latest-comments__comment-avatar {}
+	
+	.wp-block-latest-comments__comment-meta {}
+	.wp-block-latest-comments__comment-author {}
+	.wp-block-latest-comments__comment-link {}
+	.wp-block-latest-comments__comment-date {
+		font: inherit;
+		color: $grey-medium;
+	}
+	
+	.wp-block-latest-comments__comment-excerpt {
+		p {
+			font: inherit;
+			margin: 0 0 2rem;
+		}
+		> :last-child {
+			margin-bottom: 0;
+		}
+	}
+	
+	// Block settings
+	&.has-avatars {}
+	&.has-dates {}
+	&.has-excerpts {}
+	
+	// Alignment variations
+	&.aligncenter {}
+	&.alignleft {}
+	&.alignright {}
+	&.alignwide {}
+	&.alignfull {}
+}
+
+
+// Latest Posts block [gutenberg]
+// ------------------------------
+.wp-block-latest-posts {
+	li {}
+	a {}
+	.wp-block-latest-posts__post-date {
+		font: inherit;
+		color: $grey-medium;
+	}
+	
+	// Block settings
+	&.has-dates {}
+	
+	// Style variation: Grid
+	&.is-grid {
+		margin: 0 0 0 -#{$space};
+		
+		li {
+			flex: none;
+			margin: 0 0 $space $space;
+			border: 1px solid $grey-lighter;
+			padding: 1rem;
+			border-radius: 5px;
+			width: calc( 100% - #{$space} );
+			box-sizing: border-box;
+			
+			@include screen-above( small ) {
+				width: calc( 100% / 2 - #{$space} );
+			}
+		}
+	}
+	@include screen-above( medium ) {
+		&.columns-3 li {
+			width: calc( 100% / 3 - #{$space} );
+		}
+		&.columns-4 li {
+			width: calc( 100% / 4 - #{$space} );
+		}
+		&.columns-5 li {
+			width: calc( 100% / 5 - #{$space} );
+		}
+		&.columns-6 li {
+			width: calc( 100% / 6 - #{$space} );
+		}
+	}
+	
+	// Alignment variations
+	&.aligncenter {}
+	&.alignwide {
+		&.is-grid {
+			margin-left: calc( 50% - #{$space / 2} );
+			width: calc( 100% + 24rem + #{$space} );
+			max-width: calc( 100vw + #{$space} );
+		}
+	}
+	&.alignfull {
+		&.is-grid {
+			margin-left: calc( 50% - #{$space / 2} );
+			width: calc( 100vw + #{$space} );
+		}
+	}
+}

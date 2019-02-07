@@ -11,23 +11,27 @@
 // Content elements
 @import 'content/base';
 @import 'content/headings';
+@import 'content/paragraphs';
 @import 'content/dividers';
 @import 'content/links';
 @import 'content/buttons';
 @import 'content/lists';
 @import 'content/quotes';
-@import 'content/code';
-@import 'content/figures';
+@import 'content/preformatted';
+@import 'content/images';
+@import 'content/embeds';
 @import 'content/forms';
 @import 'content/tables';
 @import 'content/messages';
 @import 'content/grids';
+@import 'content/widgets';
 @import 'content/utility';
 @import 'content/wordpress';
 
 // Layout elements
 @import 'layout/containers';
 @import 'layout/header';
+@import 'layout/main';
 @import 'layout/footer';
 @import 'layout/pagination';
 @import 'layout/search-form';

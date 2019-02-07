@@ -1,0 +1,49 @@
+// ==================================================
+// Preformatted
+// ==================================================
+
+
+// Standard preformatted elements
+// ------------------------------
+pre, code {
+	font-family: $font-code;
+	background-color: $grey-lighter;
+}
+pre {
+	padding: .5em 1em;
+	overflow: auto;
+}
+var, kbd {
+	font-family: inherit;
+}
+samp {
+	font-family: inherit;
+	font-weight: bolder;
+}
+
+
+// Preformatted block [gutenberg]
+// ------------------------------
+.wp-block-preformatted {
+}
+
+
+// Code block [gutenberg]
+// ------------------------------
+.wp-block-code {
+	color: $grey-lighter;
+	background: $grey-dark;
+	
+	code {
+		color: inherit;
+		background: inherit;
+	}
+}
+
+
+// Verse block [gutenberg]
+// ------------------------------
+.wp-block-verse {
+	font: inherit;
+	color: inherit;
+}
