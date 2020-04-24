@@ -162,6 +162,12 @@ body{
   -moz-osx-font-smoothing:grayscale;
 }
 
+::-moz-selection{
+  color:white;
+  background-color:#333;
+  text-shadow:none;
+}
+
 ::selection{
   color:white;
   background-color:#333;
@@ -624,6 +630,23 @@ input[type=month]::-ms-input-placeholder,
 input[type=week]::-ms-input-placeholder,
 textarea::-ms-input-placeholder,
 select::-ms-input-placeholder{
+  color:#717171;
+}
+input[type=text]::-moz-placeholder,
+input[type=password]::-moz-placeholder,
+input[type=email]::-moz-placeholder,
+input[type=url]::-moz-placeholder,
+input[type=tel]::-moz-placeholder,
+input[type=search]::-moz-placeholder,
+.ie11 input[type=color]::-moz-placeholder,
+input[type=number]::-moz-placeholder,
+input[type=date]::-moz-placeholder,
+input[type=time]::-moz-placeholder,
+input[type=datetime-local]::-moz-placeholder,
+input[type=month]::-moz-placeholder,
+input[type=week]::-moz-placeholder,
+textarea::-moz-placeholder,
+select::-moz-placeholder{
   color:#717171;
 }
 input[type=text]::placeholder,

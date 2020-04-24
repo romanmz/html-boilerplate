@@ -27,7 +27,7 @@
     "browser-sync": "^2.26.7",
     "browser-sync-webpack-plugin": "^2.0.1",
     "laravel-mix": "^4.0.16",
-    "sass": "^1.16.1",
+    "sass": "^1.26.5",
     "sass-loader": "^7.1.0"
   }
 }
