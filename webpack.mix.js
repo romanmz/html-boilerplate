@@ -19,4 +19,4 @@ mix.webpackConfig({ devtool: 'source-map' });
 // 		'assets/css/*.css',
 // 	],
 // });
-// mix.disableNotifications();
+mix.disableSuccessNotifications();
